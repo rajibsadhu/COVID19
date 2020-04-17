@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - COVID19 CASE </title>
+   
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/v4-shims.min.css" integrity="sha256-wN7QJaqAwQ03kgUhyN4EU2phRdDkLrQYbFe0EvpQ60U=" crossorigin="anonymous" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
+*
+{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    background-attachment: fixed;
+}
+body
+{
+    background-color: antiquewhite;
+}
+header
+{
+    position: relative;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #fff;
+    box-sizing: border-box;
+    border: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.logo
+{
+    color: #069370;
+    height: 120px;
+    padding: 0 2px;
+    background: #fff;
+    box-sizing: border-box;
+    float: left;
+    text-decoration: none;
+}
+nav
+{
+    float: right;
+}
+.clearfix
+{
+    clear: both;
+}
+nav ul
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li
+{
+    list-style: none;
+}
+nav ul li a
+{
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #262626;
+}
+nav ul li a.active,
+nav ul li a:hover
+{
+    background: #069370;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.cases
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+
+@media (max-width:1200px)
+{
+    header
+    {
+        margin: 20px;
+    }
+}
+@media (max-width:768px)
+{
+    .menu-bar
+    {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background: #fff;
+    float: right;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+    color: #069370;
+    }
+    .menu-bar:before
+    {
+        content: '\f0c9';
+        font-family: fontAwesome;
+        line-height: 40px;
+    }
+    .menu-bar.active:before
+    {
+        content: '\f00d';
+        font-family: fontAwesome;
+        line-height: 40px;
+    }
+    nav
+    {
+        display: none;
+    }
+    nav.active
+    {
+        display: block;
+        width: 100%;
+    }
+    nav.active ul
+    {
+        display: block;
+    }
+    nav.active ul li
+    {
+        margin: 0;
+    }
+}
+
+
+
+.text
+{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.footer
+{
+    background: #162c3b;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer ul
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer ul li
+{
+    list-style: none;
+}
+.footer ul li a
+{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+.footer ul li a img
+{
+    filter: invert(1);
+    max-width: 20px;
+}
+@media (max-width: 991px)
+{
+    .footer
+    {
+        padding: 20px 50px;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .footer ul
+    {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+        .about
+        {
+        position: relative;
+        width: 100%;
+        padding:50px;
+        display: flex;
+        }
+        .txt
+        {
+        
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        }
+    </style>
+    
+</head>
+<body onload="fetch()">
+<!--Menu Bar-->
+
+<header>
+    <a href="#" > <img class="logo" src="files/logo-eraser.png" alt=""></a>
+    <div class="menu-bar"></div>
+    <nav>
+        <ul>
+        
+            <li><a href="indiacase.php">Home</a></li>
+            <li><a href="#" class="active">About</a></li>
+            <li><a href="dailycase.php">Daily Cases</a></li>
+            <li><a href="worldcase.php"> World Cases </a></li>
+            <li><a href="contact.php">Contact</a></li>
+        </ul>
+    
+    </nav>
+    <div class="clearfix">
+    </div>
+</header>
+<section class="text-center">
+    <div class="mb-3  card bg-dark text-white text-uppercase text-center">
+        
+        <h2 class="card-body">About</h2>
+    
+    </div>
+
+</section>
+<main class="about" >
+    <div class="contentBx">
+        <p class="txt">
+        This Website Create By <a href="https://rajibsadhu.github.io/home_page/">Rajib Sadhu</a> . API taken for this Website from <a href="https://www.covid19india.org/" target="blank">covid19india.org</a> website.
+            In computer programming, an application programming interface (API) is a set of subroutine definitions, protocols,
+             and tools for building software and applications. ...
+             Web API as the name suggests, is an API over the web which can be accessed using HTTP protocol. <br>
+             This Project is Based in GITHUB.
+        </p>
+
+
+    </div>
+</main>
+<footer class="footer">
+<!--
+<section class="footer">
+     <p class="text">This Website Created by Rajib Sadhu</p>
+     <ul>
+         <p class="text">Follow me on</p>
+         <li><a href="https://www.facebook.com/rajib.sadhu.99/" target="blank"><img src="files/facebook.png"></a></li>
+         <li><a href="https://twitter.com/rajib_sadhu"  target="blank"><img src="files/twitter.png"></a></li>
+         
+     </ul>
+ </section>
+
+
+
+
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>This Website Create By Rajib Sadhu</p>
+</div> -->
+</footer>
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function()
+    {
+        $('.menu-bar').click(function(){
+            $('.menu-bar').toggleClass('active')
+            $('nav').toggleClass('active')
+        });
+    });
+
+</script>
+
+
+
+</body>
+</html>
