@@ -52,20 +52,20 @@
  
     <div class="d-flex justify-content-around cases text-uppercase align-items-center">
         <div class="text-danger totalcase" >
-            <h5>Confirm</h5>
-            <span style="color:black;">+916</span><p>14,348</p>
+            <h6>Confirm</h6>
+            <span id="Nconfirm" style="color:black;">+691</span><p id="Tconfirm"></p>
         </div>
         <div class="text-primary totalcase">
-            <h5>Active</h5>
-            <p>11,832</p>
+            <h6>Active</h6>
+            <p id="Tactive">11,673</p>
         </div>
         <div class="text-success totalcase">
-            <h5>Recovered</h5>
-            <span style="color:black;">+269</span><p>2,037</p>
+            <h6>Recovered</h6>
+            <span id="Nrecover" style="color:black;">+208</span><p id="Trecover">1,976</p>
         </div>
         <div class="text-secondary totalcase">
-            <h5>Deaths</h5>
-            <span style="color:black;">+31</span><p>479</p>
+            <h6>Deaths</h6>
+            <span id="Ndeath" style="color:black;">+26</span><p id="Tdeath">474</p>
         </div>
     </div>
 </section>
@@ -187,6 +187,27 @@
         );
     }
 
+    $.get("https://api.covid19api.com/summary",
+        
+        function(data){
+
+
+           document.getElementById('Tconfirm').innerHTML =  data['Countries'][100]['TotalConfirmed'];
+           document.getElementById('Nconfirm').innerHTML = "+". data['Countries'][100]['NewConfirmed'];
+
+           document.getElementById('Trecover').innerHTML =  data['Countries'][100]['TotalRecovered'];
+           document.getElementById('Nrecover').innerHTML = "+". data['Countries'][100]['NewRecovered'];
+
+           document.getElementById('Tdeath').innerHTML =  data['Countries'][100]['TotalDeaths'];
+           document.getElementById('Ndeath').innerHTML = "+". data['Countries'][100]['NewDeaths'];
+
+           
+           document.getElementById('Udate').innerHTML = data['Countries'][100]['Date'];
+
+         //  document.getElementById('Tactive').innerHTML = data['Countries'][100]['NewConfirmed'];
+
+                  
+        });
 
 
 </script>
