@@ -56,15 +56,15 @@
     <div class="d-flex justify-content-around cases text-uppercase align-items-center">
         <div class="text-danger" >
             <h4>Confirm</h4>
-            <p>2,231,438</p>
+            <p id="Tc">2,214,461</p>
         </div>
-        <div class="text-success">
+        <div  class="text-success">
             <h4>Recovered</h4>
-            <p>564,718</p>
+            <p id="Tr">560,309</p>
         </div>
         <div class="text-secondary">
             <h4>Deaths</h4>
-           <p>150,837</p>
+           <p id="Td">148,979</p>
         </div>
     </div>
 </section>
@@ -186,6 +186,10 @@ $(document).ready(function()
                   tbval.rows[i].cells[6].innerHTML = data['Countries'][i-1]['NewDeaths'];
                   tbval.rows[i].cells[6].style.background ='#4bb7d8';
               }
+            
+              document.getElementById('Tc').innerHTML = data['Global']['TotalConfirmed'];
+              document.getElementById('Tr').innerHTML = data['Global']['TotalRecovered'];
+              document.getElementById('Td').innerHTML = data['Global']['TotalDeaths'];
             }
         );
     }
