@@ -19,11 +19,11 @@
     <nav>
         <ul>
         
-            <li><a href="indiacase.php" >Home</a></li>
-            <li><a href="about.php">About</a></li>
-            <li><a href="dailycase.php">Daily Cases</a></li>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="dailycase.html">Daily Cases</a></li>
             <li><a href="#" class="active"> World Cases </a></li>
-            <li><a href="contact.php">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     
     </nav>
